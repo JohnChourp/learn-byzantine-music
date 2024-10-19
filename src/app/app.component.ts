@@ -1,18 +1,46 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
+import { TranslateConfigService } from './translate-config.service';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
   public appPages = [
-    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    { title: 'home', url: '/home', icon: 'home' },
+    {
+      title: this.translate.instant('scale-pthongs'),
+      url: '/scale-pthongs',
+      icon: 'podium-outline',
+    },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  private onLangChange: Subscription = new Subscription();
+
+  constructor(
+    private translate: TranslateService,
+    private translateConfigService: TranslateConfigService,
+    private el: ElementRef
+  ) {
+    this.translateConfigService.setLanguage('el');
+  }
+
+  ngOnInit() {
+    this.onLangChange = this.translate.onLangChange.subscribe(() => {
+      this.updateLanguage();
+    });
+  }
+
+  updateLanguage() {
+    const lang = document.createAttribute('lang');
+    lang.value = this.translate.currentLang;
+    this.el.nativeElement.parentElement.parentElement.attributes.setNamedItem(
+      lang
+    );
+  }
+
+  ngOnDestroy(): void {
+    this.onLangChange?.unsubscribe();
+  }
 }
