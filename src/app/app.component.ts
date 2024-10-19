@@ -2,6 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { TranslateConfigService } from './translate-config.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -11,11 +12,12 @@ export class AppComponent implements OnInit, OnDestroy {
   public appPages = [
     { title: 'home', url: '/home', icon: 'home' },
     {
-      title: this.translate.instant('scale-pthongs'),
+      title: 'scale-pthongs',
       url: '/scale-pthongs',
       icon: 'podium-outline',
     },
   ];
+
   private onLangChange: Subscription = new Subscription();
 
   constructor(

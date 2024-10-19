@@ -1,13 +1,82 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>scale-pthongs</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ 'scale-pthongs' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">scale-pthongs</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <ion-text>… Νη Πα Βου Γα Δι Κε Ζω Νη …</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          Οι Φθόγγοι προέρχονται από τα 7 πρώτα γράμματα του Ελληνικού Αλφάβητου:
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <ion-text color="primary"><b>Α Β Γ Δ Ε Ζ Η</b></ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <ion-text>...Π</ion-text><ion-text color="primary">Α </ion-text><ion-text color="primary">
+          Β</ion-text>ΟΥ
+        <ion-text color="primary"> Γ</ion-text>Α<ion-text color="primary"> ΔΙ </ion-text>Κ<ion-text color="primary">Ε
+        </ion-text>
+        <ion-text color="primary"> Ζ</ion-text>Ω Ν<ion-text color="primary">Η...</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>Οι Φθόγγοι δεν σταματούν από δεξιά ούτε από αριστερά, δηλαδή, η παραπάνω οκτάδα αν την συνεχίζαμε απο
+          δεξιά θα ήταν:</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <ion-text>
+          ...Νη Πα Βου Γα Δι Κε Ζω … Νη Πα Βου Γα Δι Κε Ζω Νη...
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          Φανταστήτε τους φθόγγους να βρίσκονται πάνω σε μια σκάλα όπως φαίνεται παρακάτω:
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><img class="header-logo" src="/assets/pthongs/pthongs_staircase.png" />
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <ion-text color="primary">
+          <h1>
+            Άσκηση
+          </h1>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><img class="header-logo" src="/assets/exercises/exercise_1.png" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
