@@ -1,0 +1,7 @@
+{
+  "name": "learn-byzantine-music",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
