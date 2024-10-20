@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ChantStructuralPage } from './chant-system/chant-system.page';
+import { CharactersQuantityPage } from './characters-quantity/characters-quantity.page';
 import { HomePage } from './home/home.page';
 import { ScalePthongsPage } from './scale-pthongs/scale-pthongs.page';
 
@@ -16,6 +18,14 @@ const routes: Routes = [
   {
     path: 'scale-pthongs',
     component: ScalePthongsPage,
+  },
+  {
+    path: 'chant-system',
+    component: ChantStructuralPage,
+  },
+  {
+    path: 'characters-quantity',
+    component: CharactersQuantityPage,
   },
 ];
 

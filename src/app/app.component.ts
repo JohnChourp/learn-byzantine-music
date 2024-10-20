@@ -16,6 +16,16 @@ export class AppComponent implements OnInit, OnDestroy {
       url: '/scale-pthongs',
       icon: 'podium-outline',
     },
+    {
+      title: 'chant-system',
+      url: '/chant-system',
+      icon: 'musical-notes-outline',
+    },
+    {
+      title: 'characters-quantity',
+      url: '/characters-quantity',
+      icon: 'cube-outline',
+    },
   ];
 
   private onLangChange: Subscription = new Subscription();
