@@ -17,3 +17,17 @@
 .sign-apostrophe {
   height: 37px;
 }
+
+@media (max-width: 576px) {
+  ion-col.size-2,
+  ion-col.size-6 {
+    --ion-grid-column-width: 100%;
+  }
+  ion-grid {
+    padding: 10px;
+  }
+  .ion-text-center img {
+    max-width: 80%;
+    height: auto;
+  }
+}
